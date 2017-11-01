@@ -1,0 +1,70 @@
+html{color:#000;background:#FFF;} 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form, 
+fieldset,input,textarea,p,blockquote,th,td { 
+margin:0; 
+padding:0; 
+} 
+table { 
+border-collapse:collapse; 
+border-spacing:0; 
+} 
+fieldset,img { 
+border:0; 
+} 
+address,caption,cite,code,dfn,em,strong,th,var { 
+font-style:normal; 
+font-weight:normal; 
+} 
+ol,ul { 
+list-style:none; 
+} 
+caption,th { 
+text-align:left; 
+} 
+h1,h2,h3,h4,h5,h6 { 
+font-size:100%; 
+font-weight:normal; 
+} 
+q:before,q:after { 
+content:''; 
+} 
+abbr,acronym { border:0; 
+} 
+
+
+/*
+
+        // document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75 + 'px';
+
+
+//此设置以375px/100  为标准  （设计搞）  
+    //计算元素宽度时 除以100 为此元素的rem值
+
+    // (function (doc, win) {
+    //   var docEl = doc.documentElement,
+    //   resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    //   recalc = function () {
+    //   var clientWidth = docEl.clientWidth;
+    //   if (!clientWidth) return;
+      // docEl.style.fontSize = 16 * (clientWidth / 320) + 'px';//font-size 16     基础宽度320
+    // };
+    // if (!doc.addEventListener) return;
+    //   win.addEventListener(resizeEvt, recalc, false);
+    //   doc.addEventListener('DOMContentLoaded', recalc, false);
+    // })(document, window); 
+
+    //scss部分
+    // //基础font-size
+    // $font:16;
+    // //设计稿宽度
+    // $screen:750;
+    // @function px2rem($n){
+    // @return #{$n/($screen*$font/320)}rem
+    // }
+
+    //此设置计算单位比较复杂，没去研究
+
+
+
+
+*/
