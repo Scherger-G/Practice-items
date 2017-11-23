@@ -1,0 +1,201 @@
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+
+mixin混合指令方法目录
+
+    |
+    |-- browser 浏览器兼容样式
+    |
+    |
+    |-- browser_keyframes 浏览器动画兼容样式
+    |
+    |
+    |-- screen 响应式 （可用变量存储多个值）(如果大于3个数量，目前使用 @each循环。 弊端是不能用逗号连接组合，待优化 )
+    |
+    |
+    |-- b_img 背景图片样式封装
+    |
+    |       
+    |-- position_Center 水平 / 垂直  居中样式封装
+    |       
+    |       
+    |-- calc_Rem 计算rem    
+    |       
+
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+
+///  浏览器兼容样式
+///
+///  @group 浏览器兼容
+///  @name browser
+///  
+///  @param {string} $property - CSS3属性浏览器兼容
+///  @param {value} $value - 与$property相对应属性的值 
+
+@mixin browser ($property,$value){
+    
+        -webkit-#{$property} : $value;
+        -moz-#{$property} : $value;
+        -ms-#{$property} : $value;
+        -o-#{$property} : $value;
+        #{$property} : $value;
+    
+    }
+    
+    
+    
+    
+    ///  浏览器动画兼容样式
+    ///
+    ///  @group 浏览器兼容
+    ///  @name browser_keyframes
+    ///  
+    ///  @param {string} $animationName - 动画名称
+    ///  @param {string} $content - 该动画相对应的操作内容
+    
+    @mixin browser_keyframes($animationName) {
+    
+        @-webkit-keyframes #{$animationName} {
+            @content;
+        }
+        @-moz-keyframes #{$animationName} {
+            @content;
+        }
+        @-ms-keyframes #{$animationName} {
+            @content;
+        }
+        @-o-keyframes #{$animationName} {
+            @content;
+        }
+        @keyframes #{$animationName} {
+            @content;
+        }
+    
+    }
+    
+    
+    
+    
+    ///  响应式
+    ///
+    ///  @group 媒体响应式
+    ///  @name screen
+    ///  
+    ///  @param {string | arr } $property - 媒体功能,例如常用的: max-width \ min-width 
+    ///  @param {number} $maxWidth - 与$property相对应的数值
+    ///  @param {string} $mediaType [ only screen ] - 媒体类型,例如: screen \ pring
+    ///  @param {string} $content - 与响应式相对应的内容设置
+    
+    @mixin screen ($property,$maxWidth,$mediaType: only screen){
+    
+         $i:length($property); 
+    
+            @if $i == 1 {
+    
+                @media #{$mediaType} and ( nth($property,1) : #{$maxWidth} ) {
+                    @content;
+                }
+    
+            } @else if $i == 2 {
+    
+                @media #{$mediaType} and ( nth($property,1) : #{$maxWidth} ) ,  #{$mediaType} and ( nth($property,2) : #{$maxWidth} ) {
+                    @content;
+                }
+    
+            } @else{
+    
+                @each $i in $property{
+                    @media #{$mediaType} and (#{$i}: #{$maxWidth} ) {
+                        @content;
+                    }
+                }
+    
+            }
+        
+    }
+    
+    
+    
+    
+    ///  背景图片样式封装
+    ///
+    ///  @group 常用样式属性
+    ///  @name b_img
+    ///  
+    ///  @param {string} $imgUrl - 图片的路径
+    ///  @param {string} $name - 图片名，需要带后缀例如： aa.jpg \ bb.png \ cc.gif
+    ///  @param {number} $wSize [ 100% ] - 图片宽度,需要带单位例如： 50% \ 50px \ 50rem 
+    ///  @param {number} $hSize [ 100% ] - 图片高度,需要带单位例如： 50% \ 50px \ 50rem 
+    ///  @param {string} $repeat [ no-repeat ] - 定义图片是否重复 
+    
+    @mixin b_img($imgUrl,$name,$wSize:100%,$hSize:100%,$repeat:no-repeat){
+    
+        background: url(#{$imgUrl}#{$name}) {
+            repeat:$repeat;
+            size:$wSize $hSize; 
+        }
+    
+    }
+    
+    
+    
+    
+    ///  水平 / 垂直 居中样式封装
+    ///
+    ///  @group 常用样式属性
+    ///  @name position_Center
+    ///  
+    ///  @param {string} $unit - 单位,例如: px \ rem 
+    ///  @param {number} $width - 元素宽度
+    ///  @param {number} $height [ false ] - 元素高度
+    
+    @mixin position_Center($width:false,$height: false,$unit:rem){
+    
+        position: absolute;
+
+
+        @if $width{
+            left: 50%;
+            margin-left: -($width/2)+$unit;
+        }
+
+        @if $height{
+            // height: $height+$unit;
+            top: 50%;
+            margin-top: -($height/2) + $unit
+        }
+    
+    }
+    
+    
+    
+    
+    ///  计算rem 
+    ///
+    ///  @group 方法
+    ///  @name calc_Rem
+    ///  
+    ///  @param {number} $n - 针对相应的设计稿所测量元素的数值
+    ///  @param {boolean} $switch [ false] - 判断是否需要添加rem单位 
+    ///  @param {number} $font [ 20 ] - 基准Font-size
+    ///  @param {number} $datum [ 375 ] - 基准宽度,相对应iphone6, iphone6设备上的dpi = 2dpi
+    ///  @param {number} $screen [ 750 / 2 ] - 设计稿宽度/dpi
+    ///  @param {number} $w [ $n / 2 ] - 元素尺寸/dpi
+    ///  @return {number} - 返回已经计算好的rem单位  
+    
+    @function calc_Rem($n,$switch:false){
+    
+        $font: 20;
+        $datum:375;
+        $screen:750 / 2;
+        $w:$n / 2;
+
+        @if $switch{
+            @return  $w/($screen*$font/$datum);
+        }@else{
+            @return  $w/($screen*$font/$datum)+rem;
+        }
+        
+    }
+    

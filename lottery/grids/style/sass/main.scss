@@ -1,0 +1,74 @@
+
+@import 'common';
+@import '_mixin';
+@import '_variable';
+@import 'screen';
+
+
+
+
+.wrap{
+    background: #ef4d0e;
+    width: 400px;
+    height: 400px;
+    margin: 10% auto;
+    position: relative;
+    padding: 2%;
+     
+    @include browser(border-radius,20px)
+}
+
+ul{
+    width: 100%;
+    height: 100%;
+    background: #c33903;
+    @include browser(border-radius,20px);
+    padding: 10px;
+    position: relative;
+
+    li{
+        width: 31%;
+        height: 31%;
+        float: left;
+        background: #fffefe;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        @include browser(border-radius,20px);
+        text-align: center;
+
+
+        line-height: 4.5;
+        
+    }
+    li:nth-child(5){
+        background: #ef4d0e;
+        color: #fff;
+    }
+    li:nth-child(3n){
+        margin-right: 0px;
+    }
+    li:nth-child(7n){
+        margin-bottom: 0px;
+    }
+}
+
+.target{
+    background: #0eef9e;
+}
+
+.star{cursor: pointer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
