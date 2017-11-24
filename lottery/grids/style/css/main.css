@@ -336,7 +336,7 @@ ul li {
   height: 31.5%;
   float: left;
   background: #fffefe;
-  margin-right: 10px;
+  margin-right: 2.7%;
   margin-bottom: 10px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -344,7 +344,7 @@ ul li {
   -o-border-radius: 20px;
   border-radius: 20px;
   text-align: center;
-  line-height: 6;
+  line-height: 7rem;
 }
 
 ul li:nth-child(5) {

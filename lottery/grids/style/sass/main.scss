@@ -31,13 +31,13 @@ ul{
         height: 31.5%;
         float: left;
         background: #fffefe;
-        margin-right: 10px;
+        margin-right: 2.7%;
         margin-bottom: 10px;
         @include browser(border-radius,20px);
         text-align: center;
 
 
-        line-height:6;
+        line-height:7rem;
         
     }
     li:nth-child(5){
