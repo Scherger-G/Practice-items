@@ -31,7 +31,6 @@ window.onload = function() {
             if (li.hasOwnProperty(i)) { //只输出私有属性
 
                 let classT = li[i].className;
-
                 let classN = classT.split(' ');
 
                 if (!check) {
@@ -45,19 +44,21 @@ window.onload = function() {
                         let allClass = classT + ' target';
                         li[i].setAttribute('class', allClass);
 
+                       
+                        resultText[0].innerHTML = '正在抽奖: '+li[i].innerHTML;
                     }
 
                 } else {
                     if (classN[classN.length - 1] == 'target') {
-                        console.log(li[i].innerHTML);
+                        resultText[0].innerHTML = '抽奖结果: '+li[i].innerHTML;
+                        resultText[0].setAttribute('class','resultText target')
                         flag = true;
 
+                        //重置
                         cut = Math.random() * 10 + 90;
                         turns = Math.ceil(Math.random() * 3 + 1); //旋转次数
                         speed = Math.floor((Math.random() * 10)) + 3; //速度
 
-
-                        console.log(cut)
 
                     }
                 }
@@ -71,7 +72,8 @@ window.onload = function() {
 
 
 
-    var li = document.getElementsByClassName('valueNum');
+    var li = getClassName('li','valueNum');
+    var resultText = getClassName('p','resultText');
 
 
     var num = 0; //编号
@@ -91,7 +93,7 @@ window.onload = function() {
 
         if (num == 8) { num = 0; } //归零
 
-        forLi()
+        forLi()//切换颜色
 
         num++;
         times += speed;
@@ -103,7 +105,7 @@ window.onload = function() {
             turns--;
 
             if (turns == 1) { //最后一圈降低速度
-                speed = 1;
+                speed =  Math.ceil(Math.random() * 3 );
                 times = 500;
                 cut = 503;
             }
@@ -113,8 +115,7 @@ window.onload = function() {
 
         if (turns == 0) {
 
-            forLi(true)
-
+            forLi(true)//输出结果
 
         } else {
             setTimeout(startTurn, times);
@@ -132,6 +133,7 @@ window.onload = function() {
         var target = e.target || e.srcElement;
         if (target.className == 'star' & flag == true) {
             flag = false;
+            resultText[0].classList.remove('none')
             setTimeout(startTurn, times);
         }
     }
