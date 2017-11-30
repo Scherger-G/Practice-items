@@ -1,0 +1,125 @@
+
+@import 'common';
+@import '_mixin';
+@import '_variable';
+@import 'screen';
+
+
+
+.wrap{
+    $value: 700;
+    width: $value+px;
+    height: $value+px;
+    @include position_center($value,$value,px);
+    background: $OuterCircle;
+    border-radius: 50%;
+
+    ul{
+        $value:90;
+        width: $value+%;
+        height: $value+%;
+        @include position_center($value,$value,%);
+        border-radius:50%;
+        overflow: hidden;
+        background:#166dab;
+        box-shadow: 0px 0px 12px 2px #152c3c;
+       
+        $colorGroup: #782fd8;
+
+        @for $i from 1 through 12{
+            
+            li:nth-child(#{$i}){
+
+                @include position_center(180,false,px);
+                @include browser(transform,rotate(30deg*$i));
+                @include browser(transform-origin,center 315px 10px);
+
+            }
+
+        }
+
+        li:nth-child(odd){
+            &:after{
+                content: '';
+                display: block;
+                @include triangle(bottom,178px,308px,$oddColor);
+            }
+           
+        }
+
+        li:nth-child(even){
+
+            &:after{
+                content: '';
+                display: block;
+                @include triangle(bottom,178px,308px,$evenColor);
+            }
+            
+        }
+       
+
+    }
+
+    .title{
+        width: 10%;
+        color:#fff;
+        font-size: 26px;
+        font-weight: 600;
+        @include position_center(10,130,%);
+      
+    }
+
+    .pointerDisk{
+        $value:20;
+        width: $value+%;
+        height: $value+%;
+        @include position_center($value,$value,%);
+        background: $smallTurntable;
+        border-radius:50%;
+        text-align: center;
+        line-height:7rem;
+        color:#fff;
+        
+
+        .internal{
+            $value:80;
+            width: $value+%;
+            height: $value+%;
+            @include position_center($value,$value,%);
+            border-radius:50%;
+            background:$smallBg;
+            box-shadow:0px 0px 8px -1px #2a924f;
+            cursor: pointer;
+
+        }
+
+        .triangleUp{
+            $bottomNum:50px;
+            @include triangle(top,30px,$bottomNum,$smallTurntable);
+            position: absolute;
+            top: -$bottomNum+5;
+            left: 39%;
+        }
+    }
+    
+
+}
+.none{display: none}
+.result{text-align: center;margin-top:5%;background: $OuterCircle;color: #fff}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

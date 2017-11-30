@@ -1,0 +1,29 @@
+@include screen ($valScreen,414px){
+    html,body{
+        font-size: 22px;
+    }
+}
+
+@include screen ($valScreen,400px){
+    html,body{
+        font-size: 21.33px;
+    }
+}
+
+@include screen ($valScreen,375px){
+    html,body{
+        font-size: 20px;
+    }
+}
+
+@include screen ($valScreen,360px){
+    html,body{
+        font-size: 19.2px;
+    }
+}
+
+@include screen ($valScreen,320px){
+    html,body{
+        font-size: 17px;
+    }
+}

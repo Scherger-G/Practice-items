@@ -131,7 +131,7 @@ window.onload = function() {
 
     document.onclick = function(e) {
         var target = e.target || e.srcElement;
-        if (target.className == 'star' & flag == true) {
+        if (target.className == 'star' && flag == true) {
             flag = false;
             resultText[0].classList.remove('none')
             setTimeout(startTurn, times);
