@@ -2,7 +2,6 @@ window.onload = function(){
 
    /**
      * 
-     * 
      * @param {any} tagName 
      * @param {any} classname 
      * @returns 
@@ -21,7 +20,6 @@ window.onload = function(){
             return results;
         }
     }
-
 
     var turntable = getClassName('ul','turntable')[0];
     var internal = getClassName('p','internal')[0];
@@ -64,12 +62,10 @@ window.onload = function(){
             if(speed>1){
                 speed = speed-0.3;
             }
-         
         }
 
         initital+=speed;
         if(initital>initialDegMini &&  initital<initialDegMax ){
-            console.log(result);
 
             result.innerHTML ='结果为：'+ arr[num][0]
            
@@ -85,15 +81,12 @@ window.onload = function(){
             initialDegMini = turns*360+arr[num][2];
             initialDegMax = turns*360+arr[num][1];
 
-            console.log(arr[num]);
             flag = true;
         }else{
             setTimeout(star,times);
         }
 
     }
-
-   
 
    document.onclick = function(e){
        var target = e.target || e.srcElement;
@@ -104,6 +97,4 @@ window.onload = function(){
         setTimeout(star,times);
        }
    }
-
-   
 }
