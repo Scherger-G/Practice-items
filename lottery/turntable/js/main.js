@@ -5,7 +5,9 @@ window.onload = function(){
      * @param {any} tagName 
      * @param {any} classname 
      * @returns 
+     * 
      */
+
     function getClassName(tagName, classname) {
         if (document.getElementsByClassName) {
             return document.getElementsByClassName(classname);
@@ -20,14 +22,14 @@ window.onload = function(){
             return results;
         }
     }
-
+    
     var turntable = getClassName('ul','turntable')[0];
-    var internal = getClassName('p','internal')[0];
     var result = getClassName('p','result')[0];
+    var internal = getClassName('p','internal')[0];
 
     var flag = true;
-    var turns = Math.ceil(Math.random()*5+1);//旋转圈数
-    var speed = Math.floor(Math.random()*10)+5;//速度
+    var turns = Math.ceil(Math.random()*3+1);//旋转圈数
+    var speed = Math.floor(Math.random()*6)+5;//速度
     var num = Math.ceil(Math.random()*12)-1;//随机抽取的位置
     var times = 20;
     
@@ -41,7 +43,7 @@ window.onload = function(){
 
         let num = MathNum-i;
         if(i==1){num = i}
-        let turnDeg = deg*i-deg;
+        let turnDeg = deg*i-deg; 
         arr.push([num,turnDeg+turnBuffer,turnDeg-turnBuffer]) ;
 
     }
@@ -54,17 +56,18 @@ window.onload = function(){
     function star (){
 
         turntable.style.transform ="rotate("+initital+"deg)";
+        initital+=speed;
         if(initital ==initialDegMini-500){
             speed = speed - 2
         }
 
-        if(initital>initialDegMini-300){
+        if(initital>initialDegMini-200){
             if(speed>1){
-                speed = speed-0.3;
+                speed = speed-0.8;
             }
         }
 
-        initital+=speed;
+       
         if(initital>initialDegMini &&  initital<initialDegMax ){
 
             result.innerHTML ='结果为：'+ arr[num][0]
