@@ -43,8 +43,11 @@ window.onload = function(){
             this.arr =  this.NewArr(this.MathNum,this.deg,this.turnBuffer);//转盘角度参数
             this.initialDegMini = this.turns*360+this.arr[this.num][2];//初始最小值度数
             this.initialDegMax = this.turns*360+this.arr[this.num][1];//初始最大值度数
+            this.MathAngle = Math.ceil(Math.random()*(this.initialDegMax-this.initialDegMini) )+this.initialDegMini;//转盘停止的角度
             this.text ='结果为：'+ this.arr[this.num][0];
             
+            console.log(this.MathAngle)
+            console.log(this.arr[this.num])
         }
     
         CreateParameter.prototype.NewArr = function (MathNum,deg,turnBuffer){
@@ -88,7 +91,7 @@ window.onload = function(){
                 }
             }
     
-            if(this.initital>this.initialDegMini &&  this.initital<this.initialDegMax ){
+            if(this.initital >= this.MathAngle ){
                 this.OperatingDom('innerHTML')
                 this.reset();
             }else{
@@ -100,13 +103,14 @@ window.onload = function(){
     
         CreateParameter.prototype.reset = function (){
             //重置
-            this.initital = this.arr[this.num][2];
+            this.initital = this.MathAngle-(parseInt(this.MathAngle/360)*360);
             this.OperatingDom('rotate')
             this.num =  Math.ceil(Math.random()*12)-1;
             this.turns = Math.ceil(Math.random()*5+1);
             this.speed = Math.floor(Math.random()*10)+3;
             this.initialDegMini = this.turns*360+this.arr[this.num][2];
             this.initialDegMax = this.turns*360+this.arr[this.num][1];
+            this.MathAngle = Math.ceil(Math.random()*(this.initialDegMax-this.initialDegMini) )+this.initialDegMini;
             this.flag = true;
             this.text ='结果为：'+ this.arr[this.num][0];
     
@@ -145,9 +149,9 @@ window.onload = function(){
                     console.log(Parameter.arr[Parameter.num])
                 }
                
-                // setTimeout(dom.star(),10000);
-                // new text();
+                
             }
+            // new text();//测试
         }
 
 
@@ -162,7 +166,7 @@ window.onload = function(){
 
         // text.prototype.new = function(){
         //     console.log('this.new')
-
+        //     console.log(this)
         //     if(!this.flag){
         //         console.log('conso22 star')
         //         this.sleep(1000).then(()=>{//方式1
@@ -179,7 +183,7 @@ window.onload = function(){
 
         // text.prototype.conso22 = function(){
         //     this.num++;
-
+            
         //     if(this.num==50){
         //         console.log('thsi num is true')
         //         this.flag = true;
