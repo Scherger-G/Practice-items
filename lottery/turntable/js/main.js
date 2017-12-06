@@ -80,7 +80,6 @@ window.onload = function(){
             turns = Math.ceil(Math.random()*5+1);
             speed = Math.floor(Math.random()*10)+3;
             times = 20;
-
             initialDegMini = turns*360+arr[num][2];
             initialDegMax = turns*360+arr[num][1];
 
