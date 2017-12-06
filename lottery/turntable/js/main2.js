@@ -95,9 +95,19 @@ window.onload = function(){
                 this.OperatingDom('innerHTML')
                 this.reset();
             }else{
+               
+                // this对象的指向是可变的，但是在箭头函数中，它是固定的。
                 this.sleep(this.times).then(()=>{
                     this.star()
                 })
+
+                // setTimeout(()=>{
+                //     console.log(111)
+                //     this.star()
+                // },this.times)
+
+                //  setTimeout(this.star(),this.times)
+
             }
         }
     
@@ -157,41 +167,42 @@ window.onload = function(){
 
 
 
-        // function text(){
-        //     this.num = 0;
-        //     this.flag = false;
-        //     console.log('this.text');
-        //     this.new()
-        // }
+        function text(){
+            this.num = 0;
+            this.flag = false;
+            console.log('this.text');
+            this.new()
+        }
 
-        // text.prototype.new = function(){
-        //     console.log('this.new')
-        //     console.log(this)
-        //     if(!this.flag){
-        //         console.log('conso22 star')
-        //         this.sleep(1000).then(()=>{//方式1
-        //             this.conso22()
-        //         })
-        //         setTimeout(this.conso22(),1000)//方式2
-        //     }
-        // }
+        text.prototype.new = function(){
+            console.log('this.new')
+            console.log(this)
+            if(!this.flag){
+                console.log('conso22 star')
+                // this.sleep(1000).then(()=>{//方式1
+                //     this.conso22()
+                // })
+                var _this = this;
+                setTimeout(_this.conso22(),1000)//方式2
+            }
+        }
 
-        // text.prototype.sleep = function(time){
-        //     return new Promise((resolve) => setTimeout(resolve,time))
-        // }
+        text.prototype.sleep = function(time){
+            return new Promise((resolve) => setTimeout(resolve,time))
+        }
 
 
-        // text.prototype.conso22 = function(){
-        //     this.num++;
+        text.prototype.conso22 = function(){
+            _this.num++;
             
-        //     if(this.num==50){
-        //         console.log('thsi num is true')
-        //         this.flag = true;
-        //     }
-        //     console.log(this)
-        //     console.log('conso 22');
-        //     this.new()
-        // }
+            if(_this.num==50){
+                console.log('thsi num is true')
+                _this.flag = true;
+            }
+            console.log(_this)
+            console.log('conso 22');
+            _this.new()
+        }
     
         
         
