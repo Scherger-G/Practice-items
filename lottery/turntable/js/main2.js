@@ -46,7 +46,6 @@ window.onload = function(){
             this.MathAngle = Math.ceil(Math.random()*(this.initialDegMax-this.initialDegMini) )+this.initialDegMini;//转盘停止的角度
             this.text ='结果为：'+ this.arr[this.num][0];
             
-            console.log(this.MathAngle)
             console.log(this.arr[this.num])
         }
     
