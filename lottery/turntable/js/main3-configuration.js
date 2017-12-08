@@ -6,7 +6,7 @@
  * 
  */
 
-export let getClassName = (tagName, classname) => {
+ let GetClassName = (tagName, classname) => {
     if (document.getElementsByClassName) {
         return document.getElementsByClassName(classname);
     } else {
@@ -20,3 +20,4 @@ export let getClassName = (tagName, classname) => {
         return results;
     }
 }
+export default GetClassName;

@@ -1,8 +1,8 @@
 import Turntable from './main3-class.js';
-import {getClassName as getClass} from './main3-configuration.js';
+import GetClassName from './main3-configuration.js';
 
-const turntable = getClass('ul','turntable')[0];
-const result = getClass('p','result')[0];
+const turntable = GetClassName('ul','turntable')[0];
+const result = GetClassName('p','result')[0];
 
 
 let ProxySingleParameter = (()=>{
@@ -19,4 +19,5 @@ return function (turntable,result){
 }
 
 })();
-export  {ProxySingleParameter as parameter};
+
+export default  ProxySingleParameter ;

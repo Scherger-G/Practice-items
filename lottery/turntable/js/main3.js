@@ -1,16 +1,16 @@
-import {parameter}  from './main3-constructor.js';
+import ProxySingleParameter  from './main3-constructor.js';
 
 window.onload = ()=>{
     document.onclick = (e) =>{
         let target = e.target || e.srcElement;
         if(target.className == 'internal'){
-            let Parameter = new parameter;
-            if(Parameter.flag){
-                Parameter.result.classList.remove('none');
-                Parameter.star()
-                Parameter.flag = false
+            let Par = new ProxySingleParameter;
+            if(Par.flag){
+                Par.result.classList.remove('none');
+                Par.star()
+                Par.flag = false
             }else{
-                console.log(Parameter.arr[Parameter.num])
+                console.log(Par.arr[Par.num])
             }
         }
     }
