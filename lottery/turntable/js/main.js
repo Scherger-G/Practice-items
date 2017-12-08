@@ -29,7 +29,7 @@ window.onload = function(){
 
     var flag = true;
     var turns = Math.ceil(Math.random()*3+1);//旋转圈数
-    var speed = Math.floor(Math.random()*6)+5;//速度
+    var speed = Math.floor(Math.random()*6)+3;//速度
     var num = Math.ceil(Math.random()*12)-1;//随机抽取的位置
     var times = 20;
     
