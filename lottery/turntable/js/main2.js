@@ -1,12 +1,5 @@
 window.onload = function(){
     
-       /**
-         * 
-         * @param {any} tagName 
-         * @param {any} classname 
-         * @returns 
-         * 
-         */
     
         function getClassName(tagName, classname) {
             if (document.getElementsByClassName) {
@@ -137,10 +130,10 @@ window.onload = function(){
                 let Parameter = new ProxySingleParameter(turntable,result);
                 if(Parameter.flag){
                     Parameter.result.classList.remove('none');
-                    Parameter.star()
-                    Parameter.flag = false
+                    Parameter.star();
+                    Parameter.flag = false;
                 }else{
-                    console.log(Parameter.arr[Parameter.num])
+                    console.log(Parameter.arr[Parameter.num]);
                 }
             }
         }
