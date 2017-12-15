@@ -1,11 +1,3 @@
- /**
- * 
- * @param {any} tagName 
- * @param {any} classname 
- * @returns 
- * 
- */
-
 let GetClassName = (tagName, classname) => {
     if (document.getElementsByClassName) {
         return document.getElementsByClassName(classname);

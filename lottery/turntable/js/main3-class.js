@@ -31,7 +31,7 @@
         let arr = [];
         for(let i = 1;i<=this.turnNum;i++){
             let num = MathNum-i;//做倒叙,跳过1
-            if(i==1){num = i}
+            if(i==1){num = i;}
             let turnDeg = deg*i-deg; 
             arr.push([num,turnDeg+turnBuffer,turnDeg-turnBuffer]) ;
         }
@@ -71,13 +71,13 @@
         }
 
         if(this.initital >= this.MathAngle ){
-            this.OperatingDom('innerHTML')
+            this.OperatingDom('innerHTML');
             this.reset();
         }else{
                     
             // this对象的指向是可变的，但是在箭头函数中，它是固定的。方法一
             this.Timeout(this.times).then(()=>{
-                this.star()
+                this.star();
             })
 
             //方法二

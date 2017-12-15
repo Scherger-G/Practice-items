@@ -14,7 +14,7 @@ let ProxySingleParameter = (()=>{
 return function (turntable,result){
     if(!flag){
         instance = new Turntable(turntable,result);//更新参数
-        console.log(instance)
+        console.log(instance);
     }
     return instance;
 }
