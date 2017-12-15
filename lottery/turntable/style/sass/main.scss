@@ -1,10 +1,20 @@
 
-@import 'common';
 @import '_mixin';
 @import '_variable';
-@import 'screen';
 
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;font-size: 17px;}
 
+.none{
+    display: none;
+}
+
+.result{
+    text-align: center;
+    margin-top:1%;
+    background: $OuterCircle;
+    color: #fff;
+    font-size: 26px;
+}
 
 .wrap{
     $value: 700;
@@ -13,6 +23,7 @@
     @include position_center($value,$value,px);
     background: $OuterCircle;
     border-radius: 50%;
+    top: 45%;
 
     ul{
         $value:90;
@@ -23,19 +34,15 @@
         overflow: hidden;
         background:#166dab;
         box-shadow: 0px 0px 12px 2px #152c3c;
-       
         $colorGroup: #782fd8;
 
         @for $i from 1 through 12{
             
             li:nth-child(#{$i}){
-
                 @include position_center(180,false,px);
                 @include browser(transform,rotate(30deg*$i));
                 @include browser(transform-origin,center 315px 10px);
-
             }
-
         }
 
         li:nth-child(odd){
@@ -44,20 +51,15 @@
                 display: block;
                 @include triangle(bottom,178px,308px,$oddColor);
             }
-           
         }
 
         li:nth-child(even){
-
             &:after{
                 content: '';
                 display: block;
                 @include triangle(bottom,178px,308px,$evenColor);
             }
-            
         }
-       
-
     }
 
     .title{
@@ -66,7 +68,6 @@
         font-size: 26px;
         font-weight: 600;
         @include position_center(10,130,%);
-      
     }
 
     .pointerDisk{
@@ -79,7 +80,6 @@
         text-align: center;
         line-height:7rem;
         color:#fff;
-        
 
         .internal{
             $value:80;
@@ -90,7 +90,6 @@
             background:$smallBg;
             box-shadow:0px 0px 8px -1px #2a924f;
             cursor: pointer;
-
         }
 
         .triangleUp{
@@ -101,25 +100,4 @@
             left: 39%;
         }
     }
-    
-
 }
-.none{display: none}
-.result{text-align: center;margin-top:5%;background: $OuterCircle;color: #fff}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

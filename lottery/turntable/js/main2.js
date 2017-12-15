@@ -33,7 +33,7 @@ window.onload = function(){
             this.flag = true;//开关设置
             this.times = 20;//执行时间
             this.turns = Math.ceil(Math.random()*3+1);//旋转圈数
-            this.speed = Math.floor(Math.random()*6)+3;//速度
+            this.speed = Math.floor(Math.random()*5)+3;//速度
             this.turnNum = 12;//格子总数
             this.deg = 360/this.turnNum;//转盘所对应的度数
             this.initital = 0;//转盘旋转角度
@@ -47,6 +47,7 @@ window.onload = function(){
             this.text ='结果为：'+ this.arr[this.num][0];
             
             console.log(this.arr[this.num])
+            console.log(this.speed)
         }
     
         CreateParameter.prototype.NewArr = function (MathNum,deg,turnBuffer){
@@ -75,14 +76,12 @@ window.onload = function(){
     
         CreateParameter.prototype.judgment = function(){
             //判断
-            if(this.initital ==this.initialDegMini-500){
-                this.speed = this.speed - 2
-            }
-    
-            if(this.initital>this.initialDegMini-200){
-                if(this.speed>1){
-                    this.speed = this.speed-0.8;
+            if(this.initital >= this.initialDegMini-420){
+
+                if(this.speed>0.9){
+                    this.speed = this.speed-0.05;
                 }
+               
             }
     
             if(this.initital >= this.MathAngle ){
@@ -103,7 +102,7 @@ window.onload = function(){
             this.OperatingDom('rotate')
             this.num =  Math.ceil(Math.random()*12)-1;
             this.turns = Math.ceil(Math.random()*5+1);
-            this.speed = Math.floor(Math.random()*10)+3;
+            this.speed = Math.floor(Math.random()*3)+3;
             this.initialDegMini = this.turns*360+this.arr[this.num][2];
             this.initialDegMax = this.turns*360+this.arr[this.num][1];
             this.MathAngle = Math.ceil(Math.random()*(this.initialDegMax-this.initialDegMini) )+this.initialDegMini;
@@ -132,7 +131,6 @@ window.onload = function(){
             }
 
         })()
-    
         document.onclick = function(e){
             var target = e.target || e.srcElement;
             if(target.className == 'internal'){

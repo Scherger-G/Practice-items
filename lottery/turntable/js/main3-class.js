@@ -7,7 +7,7 @@
         this.flag = true;//开关设置
         this.times = 20;//执行时间
         this.turns = Math.ceil(Math.random()*3+1);//旋转圈数
-        this.speed = Math.floor(Math.random()*6)+3;//速度
+        this.speed = Math.floor(Math.random()*5)+3;//速度
         this.turnNum = 12;//格子总数
         this.deg = 360/this.turnNum;//转盘所对应的度数
         this.initital = 0;//转盘旋转角度
@@ -22,6 +22,8 @@
         
         console.log(this.MathAngle)
         console.log(this.arr[this.num])
+        console.log(this.speed);
+
     }
 
     NewArr(MathNum,deg,turnBuffer){
@@ -60,14 +62,12 @@
 
     judgment(){
         //判断
-        if(this.initital ==this.initialDegMini-580){
-            this.speed = this.speed - 2
-        }
-
-        if(this.initital>this.initialDegMini-110){
-            if(this.speed>1){
-                this.speed = this.speed-0.8;
+        if(this.initital >= this.initialDegMini-420){
+            
+            if(this.speed>1.2){
+                this.speed = this.speed-0.05;
             }
+            
         }
 
         if(this.initital >= this.MathAngle ){
@@ -75,13 +75,15 @@
             this.reset();
         }else{
                     
-            // this对象的指向是可变的，但是在箭头函数中，它是固定的。
+            // this对象的指向是可变的，但是在箭头函数中，它是固定的。方法一
             this.Timeout(this.times).then(()=>{
                 this.star()
             })
 
+            //方法二
             // this.asyncTimeout(this.star(),this.times);
 
+            //方法三
             // setTimeout(()=>{
             //     console.log(111)
             //     this.star()
@@ -96,7 +98,7 @@
         this.OperatingDom('rotate')
         this.num =  Math.ceil(Math.random()*12)-1;
         this.turns = Math.ceil(Math.random()*5+1);
-        this.speed = Math.floor(Math.random()*10)+3;
+        this.speed = Math.floor(Math.random()*5)+3;
         this.initialDegMini = this.turns*360+this.arr[this.num][2];
         this.initialDegMax = this.turns*360+this.arr[this.num][1];
         this.MathAngle = Math.ceil(Math.random()*(this.initialDegMax-this.initialDegMini) )+this.initialDegMini;

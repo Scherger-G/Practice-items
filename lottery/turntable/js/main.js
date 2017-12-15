@@ -29,7 +29,7 @@ window.onload = function(){
 
     var flag = true;
     var turns = Math.ceil(Math.random()*3+1);//旋转圈数
-    var speed = Math.floor(Math.random()*6)+3;//速度
+    var speed = Math.floor(Math.random()*5)+3;//速度
     var num = Math.ceil(Math.random()*12)-1;//随机抽取的位置
     var times = 20;
     
@@ -39,7 +39,7 @@ window.onload = function(){
     var deg = 360/turnNum;//转盘所对应的度数
     var turnBuffer = deg/2-5;//每个格子对应的度数缓冲区
 
-    for(let i = 1;i<=12;i++){
+    for(let i = 1;i<=turnNum;i++){
 
         let num = MathNum-i;
         if(i==1){num = i}
@@ -55,20 +55,16 @@ window.onload = function(){
   
     function star (){
 
-        turntable.style.transform ="rotate("+initital+"deg)";
-        initital+=speed;
-        if(initital ==initialDegMini-500){
-            speed = speed - 2
-        }
+        turntable.style.transform ="rotate("+initital+"deg)";//对转盘设置旋转角度
+        initital += speed; 
 
-        if(initital>initialDegMini-200){
-            if(speed>1){
-                speed = speed-0.8;
+        if(initital >= initialDegMini-420){ //判断当前旋转的角度是否达到定义的值，若达到则进行减速
+            if(speed>1.2){
+                speed = speed-0.05;
             }
         }
-
        
-        if(initital>initialDegMini &&  initital<initialDegMax ){
+        if(initital>initialDegMini &&  initital<initialDegMax ){ //判断当前旋转角度是否已经进入最大角度和最小的角度区间
 
             result.innerHTML ='结果为：'+ arr[num][0]
            
@@ -78,7 +74,7 @@ window.onload = function(){
             //重置
             num =  Math.ceil(Math.random()*12)-1;
             turns = Math.ceil(Math.random()*5+1);
-            speed = Math.floor(Math.random()*10)+3;
+            speed = Math.floor(Math.random()*5)+3;
             times = 20;
             initialDegMini = turns*360+arr[num][2];
             initialDegMax = turns*360+arr[num][1];

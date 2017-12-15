@@ -6,7 +6,7 @@
  * 
  */
 
- let GetClassName = (tagName, classname) => {
+let GetClassName = (tagName, classname) => {
     if (document.getElementsByClassName) {
         return document.getElementsByClassName(classname);
     } else {

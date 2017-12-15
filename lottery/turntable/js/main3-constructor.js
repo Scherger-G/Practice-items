@@ -5,6 +5,7 @@ const turntable = GetClassName('ul','turntable')[0];
 const result = GetClassName('p','result')[0];
 
 
+
 let ProxySingleParameter = (()=>{
 
     let  instance =  new Turntable(turntable,result);//存储参数
