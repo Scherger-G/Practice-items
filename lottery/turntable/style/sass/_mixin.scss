@@ -164,7 +164,7 @@ mixin混合指令方法目录
         @if $height{
             // height: $height+$unit;
             top: 50%;
-            margin-top: -($height/2) + $unit
+            margin-top: -($height/2) + $unit;
         }
     
     }
