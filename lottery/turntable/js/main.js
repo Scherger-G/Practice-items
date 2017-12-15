@@ -1,13 +1,5 @@
 window.onload = function(){
 
-   /**
-     * 
-     * @param {any} tagName 
-     * @param {any} classname 
-     * @returns 
-     * 
-     */
-
     function getClassName(tagName, classname) {
         if (document.getElementsByClassName) {
             return document.getElementsByClassName(classname);
