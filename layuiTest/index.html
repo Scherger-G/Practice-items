@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layui模仿</title>
+    <link rel="stylesheet" href="assets/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/css/add.css">
+</head>
+<body>
+    
+    <header>
+
+        <div class="layui-container">
+            <div class="layui-row">
+                <div class="layui-col-lg7">
+                    
+                    <div class="layui-row">
+                        <a href="layui.com" class="logo layui-col-lg2"><img src="assets/images/logo.png" alt=""></a>
+                        <div class="layui-form-item layui-form layui-col-lg4 ">
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required">
+                                <option value="">搜索组件或模块</option>
+                                <option value="0">北京</option>
+                                <option value="1">上海</option>
+                                <option value="2">广州</option>
+                                <option value="3">深圳</option>
+                                <option value="4">杭州</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <nav class="layui-col-lg5 layui-nav">
+                    <div class="layui-nav-item "><a href="">文档</a></div>
+                    <div class="layui-nav-item "><a href="">实例</a></div>
+                    <div class="layui-nav-item"><a href="">社区</a></div>
+                    <div class="layui-nav-item">
+                        <a href="javascript:;">周边</a>
+                        <dl class="layui-nav-child"> 
+                            <dd><a href="">即时聊天</a></dd>
+                            <dd><a href="">社区模板</a></dd>
+                            <dd><a href="">独立组件</a></dd>
+                            <dd><a href="">Axure组件</a></dd>
+                        </dl>
+                    </div>
+                    <div class="layui-nav-item"><a href="">官方后台模板</a></div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="banner">
+
+        <div class="layui-main">
+
+                <div class="banner-title"></div>
+
+                <p class="banner-text">由职业前端倾情打造 ， 面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案</p>
+
+                <button class="layui-btn-lg layui-btn layui-btn-primary">
+                    <i class="layui-icon">&#xe601;</i> 立即下载
+                </button>
+
+
+                <div class="banner-tips">
+
+                    <span>当前版本: 2.2.6</span>
+                    <a href="#">更新日志</a>
+                    <span>下载量 : 457005</span>
+                    
+                    <div class="banner-gitHub-Link">
+                        <button class="layui-btn layui-btn-sm">
+                            <i class="layui-icon">&#xe658;</i> Star 12430
+                        </button>
+                        <button class="layui-btn layui-btn-sm layui-btn-primar">
+                            <i class="layui-icon">&#xe62e;</i>Fork
+                        </button>
+                    </div>
+
+                </div>
+
+        </div>
+        
+    </section>
+
+
+        <section class="introduction">
+            <div class="layui-main ">
+                <div class="layui-container">
+
+                       
+                        <div class="layui-row introduction-item">
+                            <div class="layui-col-md4">
+                                <fieldset class="layui-elem-field layui-field-title">
+                                        <legend><h5>返璞归真</h5></legend>
+                                </fieldset>
+                                <p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而 layui 偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻原生态的书写指令，视图以最简单的方式诠释高效。</p>
+                            </div>
+                            <div class="layui-col-md4">
+                                <fieldset class="layui-elem-field layui-field-title">
+                                        <legend><h5>双面体验</h5></legend>
+                                </fieldset>
+                                <p>拥有双面的不仅是人生，还有 layui。一面极简，一面丰盈。极简是视觉所见的外在，是开发所念的简易。丰盈是倾情雕琢的内在，是信手拈来的承诺。一切本应如此，简而全，双重体验。</p>
+                            </div>
+                            <div class="layui-col-md4">
+                                
+                                <fieldset class="layui-elem-field layui-field-title">
+                                    <legend><h5>星辰大海</h5></legend>
+                                </fieldset>
+                                <p>如果眼下还是一团零星之火，那运筹帷幄之后，迎面东风，就是一场热烈燎原吧，那必定会是一番尽情的燃烧。待，秋风萧瑟时，散作满天星辰，你看那四季轮回，正是 layui 不灭的执念。 </p>
+                            </div>
+                        </div>
+                
+                </div>
+               
+            </div>
+        </section>
+
+    <footer>
+
+        <div class="layui-main">
+
+            <p class="copyright">&copy; 2018 <a href="http://www.layui.com">layui.com</a> MIT license</p>
+            <nav>
+                <a href="#">案例</a> 
+                <a href="#">支持</a> 
+                <a href="#">联系</a> 
+                <a href="#">GitHub</a> 
+                <a href="#">码云</a> 
+                <a href="#">微信公众号</a> 
+            </nav>
+            <p><a href=""><img src="assets/images/upyun.png" alt="upyun"></a>提供 CDN 赞助</p>
+        </div>
+
+       
+    </footer>
+
+
+<script src="assets/layui/layui.js"></script>
+
+<script>
+
+    layui.use(['element','form'], function() {
+        var element = layui.element,//导航依赖模块
+            form = layui.form;//表单组件依赖模块
+
+    })
+
+</script>
+
+</body>
+</html>
