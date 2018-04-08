@@ -1,69 +1,112 @@
+.layui-l {
+    float: left
+}
 
-.layui-l{float: left}
-.layui-container{padding: 0}
+.layui-container {
+    padding: 0
+}
 
-@font-face{
+@font-face {
     font-family: layuiFont;
     src: url('../fonts/iconfont.woff');
 }
 
-body{
-    font:14px layuiFont;
+@keyframes fly {
+    10% {
+        font-size: 130px;
+        transform: rotate(15deg);
+        margin-left: 0;
+    }
+    10.2% {
+        transform: rotate(15deg);
+        margin-left: 0;
+    }
+    20% {
+        transform: rotate(20deg);
+        margin-left: 190px;
+        font-size: 90px;
+        opacity: 1;
+    }
+    30% {
+        font-size: 0;
+        opacity: 0;
+        margin-left: 170px;
+        transform-origin: 50%;
+        -webkit-transform-origin: 50%;
+        transform: rotate(800deg);
+    }
+    35% {
+        opacity: 0.2;
+        font-size: 0px;
+        transform: rotate(2000deg) scale(3);
+    }
+    50% {
+        opacity: 0.1;
+        transform: rotate(3000deg) scale(4);
+    }
+    60% {
+        opacity: 0.5;
+        transform: rotate(0deg) scale(3);
+    }
+}
+
+body {
+    font: 14px layuiFont;
     background: #eee;
 }
 
-
-header{
+header {
     background: #0d1206;
-
-    .layui-nav{
-        background: none
+    .layui-nav {
+        background: none;
     }
-
-    .logo{
+    .logo {
         width: 84px;
         line-height: 59px;
         display: block;
         margin-right: 38px;
-        img{
+        img {
             width: 100%;
         }
-
     }
-
-    .layui-form-item{
+    .layui-form-item {
         clear: none;
         width: 200px;
     }
-
-    .layui-input-block{
+    .layui-input-block {
         margin-left: 0;
     }
-
-    .layui-form-select{
+    .layui-form-select {
         transform: translateY(50%)
     }
-    .layui-form-select .layui-input{
+    .layui-form-select .layui-input {
         background: #131e13;
         border: none;
         height: 30px;
     }
-    .layui-select-title{
-        i{display: none}
+    .layui-select-title {
+        i {
+            display: none;
+        }
     }
-
 }
 
-
-.banner{
-
+.banner {
     height: 600px;
     background: url('../images/banner0.jpg');
     color: #fff;
     text-align: center;
     position: relative;
-    
-    .banner-title{
+    .banner-icon {
+        font-size: 200px;
+        color: #b5b7b5;
+        position: absolute;
+        top: 60px;
+        left: 42%;
+        transform: rotate(-13deg);
+        animation: fly 10s;
+    }
+    .banner-title {
         width: 551px;
         height: 55px;
         background: url('../images/desc.png');
@@ -71,100 +114,87 @@ header{
         position: relative;
         top: 275px;
     }
-
-    .banner-text{
+    .banner-text {
         position: relative;
         top: 305px;
     }
-
     .layui-btn-lg {
         background: none;
         color: #ccc;
         font-size: 26px;
-        border:1px solid #495841;
+        border: 1px solid #495841;
         width: 233px;
         height: 62px;
         position: relative;
         top: 342px;
-
-        .layui-icon{
+        .layui-icon {
             font-size: 30px;
             position: relative;
             top: 3px;
         }
     }
-
-    .banner-tips{
+    .banner-tips {
         position: relative;
         top: 355px;
         font-size: 12px;
         color: #ccc;
-
-        a{
+        a {
             color: #fff;
             margin: 0 .5%;
             text-decoration: underline;
         }
     }
-
-    .banner-tips button{
+    .banner-tips button {
         background: none;
-        border:1px solid #495841;
+        border: 1px solid #495841;
         margin-top: 30px;
         color: #ccc;
     }
-
-
-
 }
 
-
-.introduction{
-  
+.introduction {
     padding-top: 50px;
-    
-    .introduction-item div{
+    .introduction-item div {
         height: 210px;
         padding: 30px;
         border: 1px solid #ccc;
-
-        .layui-elem-field{
+        .layui-elem-field {
             text-align: center
         }
         margin-right: 30px
     }
-    .introduction-item div:nth-last-child(1){
+    .introduction-item div:nth-last-child(1) {
         margin-right: 0
     }
-    .layui-col-md4{
+    .layui-col-md4 {
         width: 31.55%
     }
-    p{
+    p {
         line-height: 22px;
     }
 }
 
-
-footer{
+footer {
     padding: 88px 0 37px 0;
     text-align: center;
-
-
-    .copyright{
+    .copyright {
         color: #666;
-        a{margin: 0 .5%}
+        a {
+            margin: 0 .5%
+        }
     }
-
-    nav{
+    nav {
         margin: 10px 0 20px 0;
-        a{margin: 0 5px;}
+        a {
+            margin: 0 5px;
+        }
     }
-    nav+p{color: #999}
-
-    img{
+    nav+p {
+        color: #999
+    }
+    img {
         width: 80px;
         height: 28px;
         margin-right: 8px;
     }
-
 }

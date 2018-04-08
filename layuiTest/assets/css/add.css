@@ -11,6 +11,45 @@
   src: url("../fonts/iconfont.woff");
 }
 
+@keyframes fly {
+  10% {
+    font-size: 130px;
+    transform: rotate(15deg);
+    margin-left: 0;
+  }
+  10.2% {
+    transform: rotate(15deg);
+    margin-left: 0;
+  }
+  20% {
+    transform: rotate(20deg);
+    margin-left: 190px;
+    font-size: 90px;
+    opacity: 1;
+  }
+  30% {
+    font-size: 0;
+    opacity: 0;
+    margin-left: 170px;
+    transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    transform: rotate(800deg);
+  }
+  35% {
+    opacity: 0.2;
+    font-size: 0px;
+    transform: rotate(2000deg) scale(3);
+  }
+  50% {
+    opacity: 0.1;
+    transform: rotate(3000deg) scale(4);
+  }
+  60% {
+    opacity: 0.5;
+    transform: rotate(0deg) scale(3);
+  }
+}
+
 body {
   font: 14px layuiFont;
   background: #eee;
@@ -64,6 +103,16 @@ header .layui-select-title i {
   color: #fff;
   text-align: center;
   position: relative;
+}
+
+.banner .banner-icon {
+  font-size: 200px;
+  color: #b5b7b5;
+  position: absolute;
+  top: 60px;
+  left: 42%;
+  transform: rotate(-13deg);
+  animation: fly 10s;
 }
 
 .banner .banner-title {
