@@ -542,7 +542,7 @@ header nav .layui-nav-item:nth-last-child(2) {
   background: none;
   color: #ccc;
   font-size: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 233px;
   height: 62px;
   position: relative;
@@ -552,6 +552,11 @@ header nav .layui-nav-item:nth-last-child(2) {
 .banner .layui-btn-lg .layui-icon {
   font-size: 30px;
   margin-right: 8px;
+}
+
+.banner .layui-btn-lg:hover {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .banner .banner-tips {

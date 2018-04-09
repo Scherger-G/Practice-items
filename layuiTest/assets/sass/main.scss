@@ -93,7 +93,7 @@ header {
         background: none;
         color: #ccc;
         font-size: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         width: 233px;
         height: 62px;
         position: relative;
@@ -103,6 +103,12 @@ header {
             margin-right: 8px
         }
     }
+
+    .layui-btn-lg:hover{
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.1)
+    }
+
     .banner-tips {
         position: relative;
         top: 360px;
