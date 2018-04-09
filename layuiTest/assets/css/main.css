@@ -506,11 +506,11 @@ header nav .layui-nav-item:nth-last-child(2) {
   top: 25px;
   left: 41%;
   font-style: normal;
-  -webkit-animation: fly 10s;
-  -moz-animation: fly 10s;
-  -ms-animation: fly 10s;
-  -o-animation: fly 10s;
-  animation: fly 10s;
+  -webkit-animation: fly 10s 5s;
+  -moz-animation: fly 10s 5s;
+  -ms-animation: fly 10s 5s;
+  -o-animation: fly 10s 5s;
+  animation: fly 10s 5s;
 }
 
 .banner .banner-text-wrap {

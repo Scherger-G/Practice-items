@@ -72,7 +72,7 @@ header {
         top: 25px;
         left: 41%;
         font-style:normal;
-        @include browser('animation',fly 10s);
+        @include browser('animation',fly 10s 5s);
     }
     .banner-text-wrap{
         @include browser('animation',big .2s 6s);
