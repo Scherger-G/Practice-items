@@ -1,0 +1,46 @@
+///  浏览器兼容样式
+///
+///  @group 浏览器兼容
+///  @name browser
+///  
+///  @param {string} $property - CSS3属性浏览器兼容
+///  @param {value} $value - 与$property相对应属性的值 
+
+@mixin browser ($property,$value){
+    
+    -webkit-#{$property} : $value;
+    -moz-#{$property} : $value;
+    -ms-#{$property} : $value;
+    -o-#{$property} : $value;
+    #{$property} : $value;
+
+}
+
+
+///  浏览器动画兼容样式
+///
+///  @group 浏览器兼容
+///  @name browser_keyframes
+///  
+///  @param {string} $animationName - 动画名称
+///  @param {string} $content - 该动画相对应的操作内容
+
+@mixin browser_keyframes($animationName) {
+    
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+
+}

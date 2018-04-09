@@ -1,0 +1,47 @@
+
+@include browser_keyframes(big){
+    50%{
+        @include browser('transform',scale(1.05));
+    }
+}
+
+@include browser_keyframes(fly){
+
+    10% {
+        font-size: 130px;
+        @include browser('transform',rotate(15deg));
+        margin-left: 0;
+    }
+    20% {
+        @include browser('transform',rotate(20deg));
+        margin-left: 190px;
+        font-size: 90px;
+        opacity: 1;
+    }
+    30% {
+        font-size: 0;
+        opacity: 0;
+        margin-left: 170px;
+        @include browser('transform-origin',50%);
+        @include browser('transform',rotate(500deg));
+    }
+    35% {
+        opacity: 0.2;
+        font-size: 0px;
+        @include browser('transform',rotate(1080deg) scale(3));
+    }
+    50% {
+        opacity: 0.1;
+        @include browser('transform',rotate(2160deg) scale(4));
+    }
+    60% {
+        opacity: 0.3;
+        @include browser('transform',rotate(0deg) scale(2));
+    }
+    65%{
+        opacity: 1;
+        font-size: 200px;
+        margin-left: 0px;
+        @include browser('transform',rotate(0deg) scale(1));
+    }
+}

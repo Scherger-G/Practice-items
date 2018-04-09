@@ -1,0 +1,13 @@
+@font-face {
+  font-family: layuiFont;
+  src: url("../fonts/iconfont.woff");
+}
+
+.layui-l {
+  float: left;
+}
+
+body {
+  font: 14px layuiFont;
+  background: #eee;
+}

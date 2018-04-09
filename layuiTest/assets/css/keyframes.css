@@ -1,0 +1,54 @@
+@keyframes big {
+  50% {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fly {
+  10% {
+    font-size: 130px;
+    transform: rotate(15deg);
+    margin-left: 0;
+  }
+  10.2% {
+    transform: rotate(15deg);
+    margin-left: 0;
+  }
+  20% {
+    transform: rotate(20deg);
+    margin-left: 190px;
+    font-size: 90px;
+    opacity: 1;
+  }
+  30% {
+    font-size: 0;
+    opacity: 0;
+    margin-left: 170px;
+    transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    transform: rotate(500deg);
+  }
+  35% {
+    opacity: 0.2;
+    font-size: 0px;
+    transform: rotate(1080deg) scale(3);
+  }
+  50% {
+    opacity: 0.1;
+    transform: rotate(2160deg) scale(4);
+  }
+  60% {
+    opacity: 0.3;
+    transform: rotate(0deg) scale(2);
+  }
+  65% {
+    opacity: 1;
+    font-size: 200px;
+    margin-left: 0px;
+    transform: rotate(-13deg) scale(1);
+  }
+}

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>layui模仿</title>
     <link rel="stylesheet" href="assets/layui/css/layui.css">
-    <link rel="stylesheet" href="assets/css/add.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -16,63 +16,102 @@
 
         <div class="layui-container">
             <div class="layui-row">
-                <div class="layui-col-lg7">
+                <div class="layui-col-lg5 layui-col-md3 layui-col-sm4 layui-col-xs2">
 
                     <div class="layui-row">
-                        <a href="layui.com" class="logo layui-col-lg2"><img src="assets/images/logo.png" alt=""></a>
-                        <div class="layui-form-item layui-form layui-col-lg4 ">
+                        <a href="layui.com" class="logo layui-col-lg2 layui-col-md2 layui-col-sm5"><img src="assets/images/logo.png" alt=""></a>
+                        <div class="layui-form-item layui-form layui-col-lg5 layui-col-md5 layui-col-sm5 layui-sm-hide">
                             <div class="layui-input-block">
                                 <select name="city" lay-verify="required">
                                 <option value="">搜索组件或模块</option>
-                                <option value="0">北京</option>
-                                <option value="1">上海</option>
-                                <option value="2">广州</option>
-                                <option value="3">深圳</option>
-                                <option value="4">杭州</option>
+                                <option value="0">grid 栅格布局</option>
+                                <option value="1">admin 后台布局</option>
+                                <option value="2">color 颜色</option>
+                                <option value="3">iconfont 字体图标</option>
+                                <option value="4">animation 动画</option>
+                                <option value="5">button 按钮</option>
+                                <option value="6">form 表单组</option>
+                                <option value="7">input 输入框</option>
+                                <option value="8">select 下拉选择框</option>
+                                <option value="9">checkbox 复选框</option>
+                                <option value="10">switch 开关</option>
+                                <option value="11">radio 单选框</option>
+                                <option value="12">textarea 文本域</option>
+                                <option value="13">nav 导航菜单</option>
+                                <option value="14">breadcrumb 面包屑</option>
+                                <option value="15">tabs 选项卡</option>
+                                <option value="16">progress 进度条</option>
+                                <option value="17">collapse 折叠面板/手风琴</option>
+                                <option value="18">table 表格元素</option>
+                                <option value="19">badge 微章</option>
+                                <option value="20">timeline 时间线</option>
+                                <option value="21">blockquote 引用块</option>
+                                <option value="22">fieldset 字段集</option>
+                                <option value="23">hr 分割线</option>
+                                <option value="24">layer 弹出层/弹窗综合</option>
+                                <option value="25">laydate 日期时间选择器</option>
+                                <option value="26">layim 即时通讯/聊天</option>
+                                <option value="27">laypage 分页</option>
+                                <option value="28">laytpl 模板引擎</option>
+                                <option value="29">form 表单模块</option>
+                                <option value="30">table 数据表格</option>
+                                <option value="31">upload 文件/图片上传</option>
+                                <option value="32">element 常用元素操作</option>
+                                <option value="33">carousel 轮播/跑马灯</option>
+                                <option value="34">layedit 富文本编辑器</option>
+                                <option value="35">tree 树形菜单</option>
+                                <option value="36">flow 信息流/图片懒加载</option>
+                                <option value="37">util 工具集</option>
+                                <option value="38">code 代码修饰</option>
                                 </select>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <nav class="layui-col-lg5 layui-nav">
+                <nav class="layui-col-lg7 layui-col-md9 layui-col-sm8 layui-col-xs10 layui-nav">
                     <div class="layui-nav-item "><a href="">文档</a></div>
-                    <div class="layui-nav-item "><a href="">实例</a></div>
-                    <div class="layui-nav-item"><a href="">社区</a></div>
+                    <div class="layui-nav-item "><a href="">示例</a></div>
+                    <div class="layui-nav-item layui-sm-hide"><a href="">社区</a></div>
                     <div class="layui-nav-item">
                         <a href="javascript:;">周边</a>
+                        
                         <dl class="layui-nav-child">
                             <dd><a href="">即时聊天</a></dd>
-                            <dd><a href="">社区模板</a></dd>
+                            <dd><a href="">社区模板<span class="layui-badge-dot"></span></a></dd>
+                            <dd><hr></dd>
                             <dd><a href="">独立组件</a></dd>
-                            <dd><a href="">Axure组件</a></dd>
+                            <dd><a href="">AXure组件<span class="layui-badge-dot"></span></a></dd>
                         </dl>
                     </div>
-                    <div class="layui-nav-item"><a href="">官方后台模板</a></div>
+                    <div class="layui-nav-item layui-sm-hide"><a href="">官方后台模板<span class="layui-badge-dot"></span></a></div>
                 </nav>
             </div>
         </div>
 
     </header>
-
     <section class="banner">
 
         <div class="layui-main">
             <i class="banner-icon">&#xe609;</i>
-            <div class="banner-title"></div>
 
-            <p class="banner-text">由职业前端倾情打造 ， 面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案</p>
+            <div class="banner-text-wrap">
+                <div class="banner-title"></div>
+                
+                <p class="banner-text layui-sm-hide">由职业前端倾情打造，面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案</p>
+            </div>
+            
 
-            <button class="layui-btn-lg layui-btn layui-btn-primary">
+            <button class="layui-btn-lg  layui-btn layui-btn-primary ">
                     <i class="layui-icon">&#xe601;</i> 立即下载
                 </button>
 
 
             <div class="banner-tips">
 
-                <span>当前版本: 2.2.6</span>
+                <span>当前版本：2.2.6</span>
                 <a href="#">更新日志</a>
-                <span>下载量 : 457005</span>
+                <span>下载量：457005</span>
 
                 <div class="banner-gitHub-Link">
                     <button class="layui-btn layui-btn-sm">
@@ -96,15 +135,15 @@
 
 
                 <div class="layui-row introduction-item">
-                    <div class="layui-col-md4">
+                    <div class="layui-col-md4 layui-col-sm4 layui-col-xs12">
                         <fieldset class="layui-elem-field layui-field-title">
                             <legend>
                                 <h5>返璞归真</h5>
                             </legend>
                         </fieldset>
-                        <p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而 layui 偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻原生态的书写指令，视图以最简单的方式诠释高效。</p>
+                        <p>身处在前端社区的繁荣之下，我们都在有意或无意地追逐。而 layui 偏偏回望当初，奔赴在返璞归真的漫漫征途，自信并勇敢着，追寻于原生态的书写指令，试图以最简单的方式诠释高效。</p>
                     </div>
-                    <div class="layui-col-md4">
+                    <div class="layui-col-md4 layui-col-sm4 layui-col-xs12">
                         <fieldset class="layui-elem-field layui-field-title">
                             <legend>
                                 <h5>双面体验</h5>
@@ -112,7 +151,7 @@
                         </fieldset>
                         <p>拥有双面的不仅是人生，还有 layui。一面极简，一面丰盈。极简是视觉所见的外在，是开发所念的简易。丰盈是倾情雕琢的内在，是信手拈来的承诺。一切本应如此，简而全，双重体验。</p>
                     </div>
-                    <div class="layui-col-md4">
+                    <div class="layui-col-md4 layui-col-sm4 layui-col-xs12">
 
                         <fieldset class="layui-elem-field layui-field-title">
                             <legend>
@@ -147,6 +186,8 @@
 
 
     </footer>
+
+    <div class="fixed">&#xe606;</div>
 
 
     <script src="assets/layui/layui.js"></script>
