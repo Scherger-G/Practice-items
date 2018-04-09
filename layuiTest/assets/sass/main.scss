@@ -72,10 +72,10 @@ header {
         top: 25px;
         left: 41%;
         font-style:normal;
-        @include browser('animation',fly 10s 5s);
+        @include browser('animation',fly 10s 3s);
     }
     .banner-text-wrap{
-        @include browser('animation',big .2s 6s);
+        @include browser('animation',big .2s 9s);
     }
     .banner-title {
         width: 551px;

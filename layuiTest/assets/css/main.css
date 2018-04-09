@@ -506,19 +506,19 @@ header nav .layui-nav-item:nth-last-child(2) {
   top: 25px;
   left: 41%;
   font-style: normal;
-  -webkit-animation: fly 10s 5s;
-  -moz-animation: fly 10s 5s;
-  -ms-animation: fly 10s 5s;
-  -o-animation: fly 10s 5s;
-  animation: fly 10s 5s;
+  -webkit-animation: fly 10s 3s;
+  -moz-animation: fly 10s 3s;
+  -ms-animation: fly 10s 3s;
+  -o-animation: fly 10s 3s;
+  animation: fly 10s 3s;
 }
 
 .banner .banner-text-wrap {
-  -webkit-animation: big 0.2s 6s;
-  -moz-animation: big 0.2s 6s;
-  -ms-animation: big 0.2s 6s;
-  -o-animation: big 0.2s 6s;
-  animation: big 0.2s 6s;
+  -webkit-animation: big 0.2s 9s;
+  -moz-animation: big 0.2s 9s;
+  -ms-animation: big 0.2s 9s;
+  -o-animation: big 0.2s 9s;
+  animation: big 0.2s 9s;
 }
 
 .banner .banner-title {
