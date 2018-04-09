@@ -74,9 +74,6 @@ header {
         font-style:normal;
         @include browser('animation',fly 10s 3s);
     }
-    .banner-text-wrap{
-        @include browser('animation',big .2s 9s);
-    }
     .banner-title {
         width: 551px;
         height: 55px;
@@ -84,11 +81,13 @@ header {
         margin: 0 auto;
         position: relative;
         top: 276px;
+        @include browser('animation',big .2s 9s);
     }
     .banner-text {
         position: relative;
         top: 305px;
         color: #ccc;
+        @include browser('animation',big .2s 9s);
     }
     .layui-btn-lg {
         background: none;

@@ -513,14 +513,6 @@ header nav .layui-nav-item:nth-last-child(2) {
   animation: fly 10s 3s;
 }
 
-.banner .banner-text-wrap {
-  -webkit-animation: big 0.2s 9s;
-  -moz-animation: big 0.2s 9s;
-  -ms-animation: big 0.2s 9s;
-  -o-animation: big 0.2s 9s;
-  animation: big 0.2s 9s;
-}
-
 .banner .banner-title {
   width: 551px;
   height: 55px;
@@ -528,12 +520,22 @@ header nav .layui-nav-item:nth-last-child(2) {
   margin: 0 auto;
   position: relative;
   top: 276px;
+  -webkit-animation: big 0.2s 9s;
+  -moz-animation: big 0.2s 9s;
+  -ms-animation: big 0.2s 9s;
+  -o-animation: big 0.2s 9s;
+  animation: big 0.2s 9s;
 }
 
 .banner .banner-text {
   position: relative;
   top: 305px;
   color: #ccc;
+  -webkit-animation: big 0.2s 9s;
+  -moz-animation: big 0.2s 9s;
+  -ms-animation: big 0.2s 9s;
+  -o-animation: big 0.2s 9s;
+  animation: big 0.2s 9s;
 }
 
 .banner .layui-btn-lg {
